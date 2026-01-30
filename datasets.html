@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datasets - Abalone & Crab Age Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="analysis-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🐚 Project Home</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="analysis.html" class="nav-link">Analysis</a></li>
+                <li class="nav-item"><a href="datasets.html" class="nav-link active">Datasets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>📁 Datasets Documentation</h1>
+            <p>Comprehensive Information About Project Data Sources</p>
+        </header>
+
+        <div class="content">
+            <!-- Abalone Dataset Section -->
+            <section class="section">
+                <h2>🐚 Abalone Dataset</h2>
+                
+                <div class="dataset-detail">
+                    <h3>Overview</h3>
+                    <p>The abalone dataset contains physical measurements of abalone specimens collected from Australian waters. It is one of the most widely used datasets in machine learning for regression tasks.</p>
+                    
+                    <div class="info-box">
+                        <strong>File Name:</strong> abalone.csv<br>
+                        <strong>Total Records:</strong> 4,177<br>
+                        <strong>Total Features:</strong> 9<br>
+                        <strong>Missing Values:</strong> None<br>
+                        <strong>Data Type:</strong> Numeric & Categorical
+                    </div>
+
+                    <h3>Features Description</h3>
+                    <div class="features-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Type</th>
+                                    <th>Range/Categories</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sex</td>
+                                    <td>Categorical</td>
+                                    <td>M, F, I</td>
+                                    <td>Male, Female, Infant</td>
+                                </tr>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>Numeric</td>
+                                    <td>0.075 - 0.815 mm</td>
+                                    <td>Longest shell measurement</td>
+                                </tr>
+                                <tr>
+                                    <td>Diameter</td>
+                                    <td>Numeric</td>
+                                    <td>0.055 - 0.650 mm</td>
+                                    <td>Shell diameter perpendicular to length</td>
+                                </tr>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>Numeric</td>
+                                    <td>0.0 - 1.130 mm</td>
+                                    <td>Height with meat in shell</td>
+                                </tr>
+                                <tr>
+                                    <td>Whole Weight</td>
+                                    <td>Numeric</td>
+                                    <td>0.002 - 2.826 grams</td>
+                                    <td>Whole abalone weight</td>
+                                </tr>
+                                <tr>
+                                    <td>Shucked Weight</td>
+                                    <td>Numeric</td>
+                                    <td>0.001 - 1.488 grams</td>
+                                    <td>Weight of meat</td>
+                                </tr>
+                                <tr>
+                                    <td>Viscera Weight</td>
+                                    <td>Numeric</td>
+                                    <td>0.0005 - 0.760 grams</td>
+                                    <td>Gut weight (after bleeding)</td>
+                                </tr>
+                                <tr>
+                                    <td>Shell Weight</td>
+                                    <td>Numeric</td>
+                                    <td>0.0015 - 1.005 grams</td>
+                                    <td>Weight of dried shell</td>
+                                </tr>
+                                <tr>
+                                    <td>Rings (Age)</td>
+                                    <td>Numeric</td>
+                                    <td>1 - 29</td>
+                                    <td>Target variable: Age in years (+1.5)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Data Statistics</h3>
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <h4>Sex Distribution</h4>
+                            <p>Male: 1,528 (36.6%)<br>
+                            Female: 1,307 (31.3%)<br>
+                            Infant: 1,342 (32.1%)</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Age Distribution</h4>
+                            <p>Min Age: 1 year<br>
+                            Max Age: 29 years<br>
+                            Median Age: 9 years<br>
+                            Mean Age: 9.93 years</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Weight Range</h4>
+                            <p>Min: 0.002 g<br>
+                            Max: 2.826 g<br>
+                            Avg: 0.827 g</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Crab Dataset Section -->
+            <section class="section">
+                <h2>🦀 Crab Dataset</h2>
+                
+                <div class="dataset-detail">
+                    <h3>Overview</h3>
+                    <p>The crab dataset contains morphological measurements of crabs used for age prediction and classification. This dataset provides interesting comparisons with the abalone data for species-specific analysis.</p>
+                    
+                    <div class="info-box">
+                        <strong>File Name:</strong> CrabAgePrediction.csv<br>
+                        <strong>Total Records:</strong> 3,893<br>
+                        <strong>Total Features:</strong> 7<br>
+                        <strong>Missing Values:</strong> None<br>
+                        <strong>Data Type:</strong> Numeric
+                    </div>
+
+                    <h3>Features Description</h3>
+                    <div class="features-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Type</th>
+                                    <th>Range</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Index</td>
+                                    <td>Numeric</td>
+                                    <td>1 - 3,893</td>
+                                    <td>Specimen identifier</td>
+                                </tr>
+                                <tr>
+                                    <td>Sex</td>
+                                    <td>Categorical</td>
+                                    <td>Male, Female</td>
+                                    <td>Gender of the crab</td>
+                                </tr>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>Numeric</td>
+                                    <td>7.2 - 34.0 mm</td>
+                                    <td>Carapace length</td>
+                                </tr>
+                                <tr>
+                                    <td>Diameter</td>
+                                    <td>Numeric</td>
+                                    <td>5.8 - 29.1 mm</td>
+                                    <td>Carapace width</td>
+                                </tr>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>Numeric</td>
+                                    <td>3.2 - 18.7 mm</td>
+                                    <td>Body depth</td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>Numeric</td>
+                                    <td>0.8 - 5150 grams</td>
+                                    <td>Total body weight</td>
+                                </tr>
+                                <tr>
+                                    <td>Shucked Weight</td>
+                                    <td>Numeric</td>
+                                    <td>0.3 - 2485 grams</td>
+                                    <td>Weight without shell</td>
+                                </tr>
+                                <tr>
+                                    <td>Age (Years)</td>
+                                    <td>Numeric</td>
+                                    <td>1 - 25</td>
+                                    <td>Target variable: Age</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Data Statistics</h3>
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <h4>Sex Distribution</h4>
+                            <p>Male: 1,946 (50.0%)<br>
+                            Female: 1,947 (50.0%)</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Age Distribution</h4>
+                            <p>Min Age: 1 year<br>
+                            Max Age: 25 years<br>
+                            Median Age: 10 years<br>
+                            Mean Age: 10.32 years</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Weight Range</h4>
+                            <p>Min: 0.8 g<br>
+                            Max: 5,150 g<br>
+                            Avg: 825 g</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Quality Section -->
+            <section class="section">
+                <h2>✅ Data Quality Assessment</h2>
+                
+                <div class="quality-assessment">
+                    <div class="quality-item">
+                        <h3>Completeness</h3>
+                        <p><strong>Abalone:</strong> 100% - No missing values<br>
+                        <strong>Crab:</strong> 100% - No missing values</p>
+                    </div>
+
+                    <div class="quality-item">
+                        <h3>Consistency</h3>
+                        <p>✓ All measurements in valid ranges<br>
+                        ✓ No negative values<br>
+                        ✓ Data types consistent across records</p>
+                    </div>
+
+                    <div class="quality-item">
+                        <h3>Uniqueness</h3>
+                        <p>✓ Abalone: 4,177 unique records<br>
+                        ✓ Crab: 3,893 unique records<br>
+                        ✓ No duplicate entries detected</p>
+                    </div>
+
+                    <div class="quality-item">
+                        <h3>Validity</h3>
+                        <p>✓ All age values within biological feasibility<br>
+                        ✓ Physical measurements follow natural constraints<br>
+                        ✓ Weight relationships are logical</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Processing Section -->
+            <section class="section">
+                <h2>⚙️ Data Processing Steps</h2>
+                
+                <div class="processing-steps">
+                    <div class="step">
+                        <h3>1. Data Loading</h3>
+                        <p>Datasets loaded from CSV files using pandas. Initial shape verification and data type inspection performed.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3>2. Exploratory Analysis</h3>
+                        <p>Statistical summaries computed. Distribution of features analyzed. Correlation matrices generated.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3>3. Feature Engineering</h3>
+                        <p>New features created from existing ones. Categorical variables encoded. Polynomial features generated for enhanced models.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3>4. Data Normalization</h3>
+                        <p>Features scaled to zero mean and unit variance. Standard scaling applied for regression models.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3>5. Train-Test Split</h3>
+                        <p>80-20 split applied for model training and evaluation. Stratified sampling ensured balanced distributions.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3>6. Validation</h3>
+                        <p>Cross-validation performed with 5 folds. Model performance metrics calculated and compared.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Download Section -->
+            <section class="section">
+                <h2>📥 Data Downloads</h2>
+                
+                <div class="download-section">
+                    <div class="download-card">
+                        <h3>Abalone Dataset</h3>
+                        <p>4,177 records with 9 features</p>
+                        <p><strong>File:</strong> abalone.csv</p>
+                        <button class="download-btn" onclick="downloadDataset('abalone.csv')">Download</button>
+                    </div>
+
+                    <div class="download-card">
+                        <h3>Crab Dataset</h3>
+                        <p>3,893 records with 7 features</p>
+                        <p><strong>File:</strong> CrabAgePrediction.csv</p>
+                        <button class="download-btn" onclick="downloadDataset('CrabAgePrediction.csv')">Download</button>
+                    </div>
+
+                    <div class="download-card">
+                        <h3>Complete Project</h3>
+                        <p>All files, notebooks, and documentation</p>
+                        <p><strong>File:</strong> Group_23.ipynb</p>
+                        <button class="download-btn" onclick="downloadDataset('Group_23.ipynb')">Download</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 CSE 303 - Statistics for Data Science | Group 23</p>
+            <p>Department of Computer Science & Engineering</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="utils.js"></script>
+</body>
+</html>
