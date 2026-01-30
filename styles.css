@@ -181,3 +181,126 @@ code {
     font-family: 'Courier New', monospace;
     color: #d63384;
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease;
+}
+
+.section {
+    opacity: 0;
+}
+
+.section.fade-in {
+    opacity: 1;
+}
+
+/* Hover effects */
+.dataset-card:hover,
+.file-item:hover,
+.team-member:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+
+.methodology:hover {
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.team-member {
+    transition: all 0.3s ease;
+}
+
+/* Expanded methodology card */
+.methodology.expanded {
+    background: #fff7e6;
+    box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .container {
+    background: #0f3460;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+}
+
+body.dark-mode .section h2,
+body.dark-mode .course-info h2,
+body.dark-mode .dataset-card h4 {
+    color: #667eea;
+}
+
+body.dark-mode .section h3 {
+    color: #a0aec0;
+}
+
+body.dark-mode .course-info,
+body.dark-mode .team-section,
+body.dark-mode .dataset-card {
+    background: #1a2c52;
+    border-color: #2d3748;
+}
+
+body.dark-mode .info-item,
+body.dark-mode .file-item {
+    background: #0f3460;
+    color: #e0e0e0;
+}
+
+body.dark-mode .methodology {
+    background: #2d2419;
+    border-left-color: #ff9800;
+}
+
+body.dark-mode footer {
+    background: #0f1419;
+}
+
+body.dark-mode code {
+    background: #1a2c52;
+    color: #a0aec0;
+}
+
+body.dark-mode .highlight {
+    background: #2d2419;
+    border-left-color: #fbc02d;
+}
+
+/* Smooth transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .section h2 {
+        font-size: 1.4em;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
