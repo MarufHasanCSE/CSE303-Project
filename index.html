@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abalone & Crab Age Prediction Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .course-info {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .course-info h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            background: white;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .info-item strong {
+            color: #667eea;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .dataset-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .dataset-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .team-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .team-member:last-child {
+            border-bottom: none;
+        }
+
+        .team-member strong {
+            color: #667eea;
+        }
+
+        .files-section {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .file-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-left: 3px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .methodology {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .highlight {
+            background: #fff9e6;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #fbc02d;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐚 Abalone & Crab Age Prediction</h1>
+            <p>Comparative Analysis of Age Prediction from Physical Measurements</p>
+        </header>
+
+        <div class="course-info">
+            <h2>Course Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Course Code:</strong> CSE 303
+                </div>
+                <div class="info-item">
+                    <strong>Course Title:</strong> Statistics for Data Science
+                </div>
+                <div class="info-item">
+                    <strong>Section:</strong> 2
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Project Overview -->
+            <section class="section">
+                <h2>📋 Project Overview</h2>
+                <p>This project aims to predict the age of abalone from physical measurements and provides a comparative analysis between abalone and crab age prediction models. The analysis utilizes statistical methods and machine learning techniques to understand the relationship between physical characteristics and biological age.</p>
+                
+                <div class="highlight">
+                    <strong>Key Objective:</strong> Develop and compare predictive models for marine organism age estimation using physical measurements.
+                </div>
+            </section>
+
+            <!-- Datasets Section -->
+            <section class="section">
+                <h2>📊 Datasets</h2>
+                
+                <div class="dataset-card">
+                    <h4>Abalone Dataset</h4>
+                    <p><strong>File:</strong> <code>abalone.csv</code></p>
+                    <p>Physical measurements of abalone specimens including:</p>
+                    <ul>
+                        <li>Sex (M, F, I - Infant)</li>
+                        <li>Length, Diameter, Height</li>
+                        <li>Whole Weight, Shucked Weight, Viscera Weight, Shell Weight</li>
+                        <li>Rings (Age indicator - number of rings in the shell)</li>
+                    </ul>
+                </div>
+
+                <div class="dataset-card">
+                    <h4>Crab Age Prediction Dataset</h4>
+                    <p><strong>File:</strong> <code>CrabAgePrediction.csv</code></p>
+                    <p>Physical measurements of crab specimens for age prediction analysis and comparative study.</p>
+                </div>
+
+                <div class="dataset-card">
+                    <h4>Backup Dataset</h4>
+                    <p><strong>File:</strong> <code>abalone - Copy.csv</code></p>
+                    <p>Backup copy of the abalone dataset for data integrity.</p>
+                </div>
+            </section>
+
+            <!-- Analysis Approach -->
+            <section class="section">
+                <h2>🔬 Analysis Methodology</h2>
+                
+                <div class="methodology">
+                    <h3>Data Preprocessing</h3>
+                    <ul>
+                        <li>Data cleaning and handling missing values</li>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Feature engineering and selection</li>
+                        <li>Data normalization and scaling</li>
+                    </ul>
+                </div>
+
+                <div class="methodology">
+                    <h3>Statistical Analysis</h3>
+                    <ul>
+                        <li>Descriptive statistics and data distribution</li>
+                        <li>Correlation analysis between physical measurements and age</li>
+                        <li>Statistical hypothesis testing</li>
+                    </ul>
+                </div>
+
+                <div class="methodology">
+                    <h3>Predictive Modeling</h3>
+                    <ul>
+                        <li>Linear Regression models</li>
+                        <li>Non-linear regression approaches</li>
+                        <li>Ensemble methods (Random Forest, Gradient Boosting, etc.)</li>
+                        <li>Model evaluation and comparison</li>
+                    </ul>
+                </div>
+
+                <div class="methodology">
+                    <h3>Comparative Analysis</h3>
+                    <ul>
+                        <li>Performance comparison between abalone and crab models</li>
+                        <li>Identification of key predictive features</li>
+                        <li>Cross-species pattern analysis</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Project Files -->
+            <section class="section">
+                <h2>📁 Project Files</h2>
+                <div class="files-section">
+                    <div class="file-item">
+                        <strong>Group_23.ipynb</strong> - Main Jupyter Notebook containing all analysis, visualizations, and model implementations
+                    </div>
+                    <div class="file-item">
+                        <strong>abalone.csv</strong> - Primary abalone dataset with physical measurements and age rings
+                    </div>
+                    <div class="file-item">
+                        <strong>CrabAgePrediction.csv</strong> - Crab dataset for comparative analysis
+                    </div>
+                    <div class="file-item">
+                        <strong>abalone - Copy.csv</strong> - Backup of abalone dataset
+                    </div>
+                    <div class="file-item">
+                        <strong>index.html</strong> - Project documentation and overview (this file)
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Information -->
+            <section class="section">
+                <h2>👥 Submitted By</h2>
+                <div class="team-section">
+                    <h3>Team Members</h3>
+                    <div class="team-member">
+                        <strong>ID: 2021-3-60-101</strong> - Md Maruf Hasan
+                    </div>
+                    <div class="team-member">
+                        <strong>ID: 2021-3-60-172</strong> - Abdul Muhaimin Ibne Ali
+                    </div>
+                    <div class="team-member">
+                        <strong>ID: 2022-1-60-381</strong> - Chinmoy Karmakar
+                    </div>
+                </div>
+            </section>
+
+            <!-- Supervisor -->
+            <section class="section">
+                <h2>👨‍🏫 Submitted To</h2>
+                <div class="team-section">
+                    <h4>Dr. Mohammad Manzurul Islam</h4>
+                    <p>Assistant Professor</p>
+                    <p>Department of Computer Science & Engineering</p>
+                </div>
+            </section>
+
+            <!-- Key Insights -->
+            <section class="section">
+                <h2>🔍 Expected Insights</h2>
+                <ul>
+                    <li><strong>Physical Measurements Correlation:</strong> Understanding which measurements best predict organism age</li>
+                    <li><strong>Model Performance:</strong> Evaluation of different algorithms for age prediction accuracy</li>
+                    <li><strong>Species Comparison:</strong> Identifying similarities and differences in age patterns between abalone and crabs</li>
+                    <li><strong>Feature Importance:</strong> Ranking physical measurements by their predictive power</li>
+                    <li><strong>Practical Applications:</strong> Implications for marine biology and fisheries management</li>
+                </ul>
+            </section>
+
+            <!-- Technical Details -->
+            <section class="section">
+                <h2>⚙️ Technical Stack</h2>
+                <ul>
+                    <li><strong>Language:</strong> Python 3.x</li>
+                    <li><strong>Environment:</strong> Jupyter Notebook</li>
+                    <li><strong>Libraries:</strong> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</li>
+                    <li><strong>Analysis Tools:</strong> Statistical tests, regression models, classification algorithms</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 CSE 303 - Statistics for Data Science | Group 23</p>
+            <p>Department of Computer Science & Engineering</p>
+        </footer>
+    </div>
+</body>
+</html>
